@@ -1,0 +1,9 @@
+name : projek ML saya
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      dataset : {type : string , default : "clean dataset.csv"}
+    command: "python modelling.py {dataset}"
