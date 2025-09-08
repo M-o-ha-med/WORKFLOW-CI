@@ -15,7 +15,8 @@ mlflow.set_tracking_uri("http://127.0.0.1:5000/")
 # Create a new MLflow Experiment
 mlflow.set_experiment("Online Training House price prediction")
 
-df = pd.read_csv('clean dataset.csv')
+dataset = sys.argv[1] if len(sys.argv) == 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "clean dataset.csv")
+df = pd.read_csv(dataset)
 
 LRModel = LinearRegression()
 
