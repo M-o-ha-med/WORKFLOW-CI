@@ -31,7 +31,7 @@ with mlflow.start_run():
  
     mlflow.sklearn.log_model(
         sk_model = LRModel,
-        artifact_path = "online_model_LinearRegression",
+        artifact_path = "model",
         input_example=X.iloc[:5]
 
     )
