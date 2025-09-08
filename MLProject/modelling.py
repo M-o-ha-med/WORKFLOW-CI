@@ -4,6 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import mlflow
 import sys
+import os
 
 dataset = sys.argv[1] if len(sys.argv) == 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "clean dataset.csv")
 df = pd.read_csv(dataset)
