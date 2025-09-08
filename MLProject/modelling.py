@@ -1,12 +1,9 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, GradientBoostingRegressor
-from sklearn.linear_model import LogisticRegression, LinearRegression
-from sklearn.metrics import accuracy_score, classification_report ,f1_score
+from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import mlflow
-from joblib import dump
+import sys
 
 dataset = sys.argv[1] if len(sys.argv) == 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "clean dataset.csv")
 df = pd.read_csv(dataset)
