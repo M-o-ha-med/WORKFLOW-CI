@@ -1,0 +1,36 @@
+artifact_path: file:///home/runner/work/WORKFLOW-CI/WORKFLOW-CI/mlruns/0/models/m-1502a371433745379df52b480fd59e03/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.5.1
+model_id: m-1502a371433745379df52b480fd59e03
+model_size_bytes: 1701
+model_uuid: m-1502a371433745379df52b480fd59e03
+prompts: null
+run_id: 22c3cffc18fd4cdeb14c31a72e644ac9
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "Unnamed: 0", "required": true}, {"type": "double",
+    "name": "square_feet", "required": true}, {"type": "long", "name": "num_rooms",
+    "required": true}, {"type": "long", "name": "age", "required": true}, {"type":
+    "double", "name": "distance_to_city(km)", "required": true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-11-04 05:49:50.608830'
