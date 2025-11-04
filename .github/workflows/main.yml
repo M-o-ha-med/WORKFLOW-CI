@@ -32,6 +32,7 @@ jobs:
       - name: Check Env
         run: |
           echo $CSV_URL
+          
       # Install mlflow
       - name: Install dependencies
         run: |
@@ -53,7 +54,7 @@ jobs:
       # Donwload artifact from mlflow run
       - name : Download artifact from latest run_id
         run : |
-          mlflow artifacts download --run-id $RUN_ID --artifact-path LR_MODEL --dst-path ./Artifacts
+          mlflow artifacts download --run-id $RUN_ID --artifact-path model --dst-path ./Artifacts
           ls -R ./Artifacts
           
       # Save Artifact to the repo
