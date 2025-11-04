@@ -12,7 +12,7 @@ env:
   TARGET_VAR: 'price'
 
 permissions :
-  write
+  contents : write
 
 jobs:
   build:
